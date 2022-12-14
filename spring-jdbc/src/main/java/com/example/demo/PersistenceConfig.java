@@ -29,6 +29,7 @@ public class PersistenceConfig {
         dataSource.setUrl(jdbcUrl);
         dataSource.setUsername(user);
         dataSource.setPassword(password);
+        System.out.println("PersistenceConfig::mysqlDataSource url=" + jdbcUrl);
         return dataSource;
     }
 }
