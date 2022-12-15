@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-jdbc
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: spring-jdbc
+  template:
+    metadata:
+      labels:
+        app: spring-jdbc
+    spec:
+      containers:
+        - image: shitalm/spring-jdbc:1.0
+          name: spring-jdbc
+          ports:
+            - containerPort: 80
