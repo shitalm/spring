@@ -14,7 +14,11 @@ spec:
         app: spring-jdbc
     spec:
       containers:
-        - image: shitalm/spring-jdbc:1.0
+# to fetch image from dockerhub, uncomment following line
+#        - image: shitalm/spring-jdbc:1.0
+# to fetch image from dockerhub, comment out two subsequent lines
+        - image: spring-jdbc:local
+          imagePullPolicy: Never
           name: spring-jdbc
           ports:
             - containerPort: 80
