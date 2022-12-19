@@ -5,6 +5,7 @@
 mysql -h 127.0.0.1 -u root -p -P 33306 < mysql-setup.txt
 
 ## build and push docker image to local microk8s container registry
+\# Docker daemon should be running on build server for this to work
 bash microk8s-push.sh
 
 ## build and push docker image to docker hub
